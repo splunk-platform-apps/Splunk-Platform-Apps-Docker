@@ -1,0 +1,33 @@
+# Check the Splunk Image documentation for more information on the configuration options
+# https://splunk.github.io/docker-splunk/
+
+services:
+  splunk-dev:
+    build:
+      context: .
+    container_name: splunk-dev
+    environment:
+      - SPLUNK_START_ARGS=--accept-license
+      - SPLUNK_PASSWORD=<your-password>
+      # Uncomment the following if you want to use a license file
+      # splunk free license
+      # - SPLUNK_LICENSE_URI=Free
+      # license from url
+      # - SPLUNK_LICENSE_URI=<http://company.com/path/to/splunk.lic>
+      # license from file
+      # - SPLUNK_LICENSE_URI=</tmp/license/splunk.lic>
+    ports:
+      # As per: https://docs.docker.com/reference/compose-file/services/#ports
+      - 8000:8000 # SplunkWeb UI
+      - 8088:8088 # HTTP Event Collector
+      - 8089:8089 # SplunkD management port (REST API access)
+      # - 9997:9997 # Indexing/receiving
+      # - 8065:8065 # Splunk app server
+      # - 8191:8191 # Key-value store replication
+      # - 9887:9887 # Index replication
+      # - 8080:8080 # Splunk UI Toolkit Demo Port
+    # volumes:
+      # By default, Splunk Enterprise uses the var directory for indexes, search artifacts, etc.
+      # In the public image, the Splunk Enterprise home directory is /opt/splunk, and the indexes are configured to run under var/.
+      # If you want to persist the indexed data, then mount an external directory into the container under this folder.
+      # - <your-volume-path>:/opt/splunk/var
