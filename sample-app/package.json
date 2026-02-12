@@ -18,6 +18,9 @@
   "workspaces": [
     "packages/*"
   ],
+  "resolutions": {
+    "@babel/runtime": "7.26.10"
+  },
   "engines": {
     "node": ">=14"
   }
