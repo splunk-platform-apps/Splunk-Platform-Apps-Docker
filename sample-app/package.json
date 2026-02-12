@@ -19,7 +19,8 @@
     "packages/*"
   ],
   "resolutions": {
-    "@babel/runtime": "7.26.10"
+    "@babel/runtime": "7.26.10",
+    "minimist": "1.2.6"
   },
   "engines": {
     "node": ">=14"
