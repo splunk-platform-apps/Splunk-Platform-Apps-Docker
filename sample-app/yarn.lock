@@ -1635,11 +1635,12 @@
     lodash "^4.17.21"
 
 "@splunk/webpack-configs@^7.0.2":
-  version "7.0.2"
-  resolved "https://registry.yarnpkg.com/@splunk/webpack-configs/-/webpack-configs-7.0.2.tgz#d1daaa6c36d88bfa813fc1568e1541d0cbbf039c"
-  integrity sha512-MTd6WI6bpfE1h1RkPcgc9eLBstKY/Ga39DyO8La3Ao+RtWtYlMwPgD8JlcCIZvtwqQ2z5ihPBiTn7BpAgV/8uQ==
+  version "7.0.3"
+  resolved "https://registry.yarnpkg.com/@splunk/webpack-configs/-/webpack-configs-7.0.3.tgz#2901183ab981b59820eb9fb70515af50986f776b"
+  integrity sha512-ZRBsG5XIkedyEyncg5YMuMZiE/SAbNJb4++s28WVVlfsCU1zsc5fmj0P6HNECDuYWsaXucwhnOM3qZfGnCSSOw==
   dependencies:
     imports-loader "^4.0.1"
+    terser-webpack-plugin "^5.3.9"
     webpack-livereload-plugin "^3.0.2"
     webpack-merge "^5.9.0"
 
@@ -2261,6 +2262,11 @@ acorn@^8.14.0, acorn@^8.2.4, acorn@^8.8.2:
   version "8.14.0"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.14.0.tgz#063e2c70cac5fb4f6467f0b11152e04c682795b0"
   integrity sha512-cl669nCJTZBsL97OF4kUQm5g5hC2uihk0NxY3WENAC0TYdILVkAyHymAntgxGkl7K+t0cXIrH5siy5S4XkFycA==
+
+acorn@^8.15.0:
+  version "8.16.0"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.16.0.tgz#4ce79c89be40afe7afe8f3adb902a1f1ce9ac08a"
+  integrity sha512-UVJyE9MttOsBQIDKw1skb9nAwQuR5wuGD3+82K6JgJlm/Y+KI92oNsMNGZCYdDsVtRHSak0pcV5Dno5+4jh9sw==
 
 add-stream@^1.0.0:
   version "1.0.0"
@@ -9183,6 +9189,16 @@ schema-utils@^3.1.1, schema-utils@^3.2.0:
     ajv "^6.12.5"
     ajv-keywords "^3.5.2"
 
+schema-utils@^4.3.0:
+  version "4.3.3"
+  resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-4.3.3.tgz#5b1850912fa31df90716963d45d9121fdfc09f46"
+  integrity sha512-eflK8wEtyOE6+hsaRVPxvUKYCpRgzLqDTb8krvAsRIwOGlHoSgYLgBXoubGgLd2fT41/OUYdb48v4k4WWHQurA==
+  dependencies:
+    "@types/json-schema" "^7.0.9"
+    ajv "^8.9.0"
+    ajv-formats "^2.1.1"
+    ajv-keywords "^5.1.0"
+
 scriptjs@^2.5.8:
   version "2.5.9"
   resolved "https://registry.yarnpkg.com/scriptjs/-/scriptjs-2.5.9.tgz#343915cd2ec2ed9bfdde2b9875cd28f59394b35f"
@@ -10092,6 +10108,16 @@ terser-webpack-plugin@^5.3.10:
     serialize-javascript "^6.0.1"
     terser "^5.26.0"
 
+terser-webpack-plugin@^5.3.9:
+  version "5.5.0"
+  resolved "https://registry.yarnpkg.com/terser-webpack-plugin/-/terser-webpack-plugin-5.5.0.tgz#d92b8e2c892dd09c683c38120394267e8d8660ef"
+  integrity sha512-UYhptBwhWvfIjKd/UuFo6D8uq9xpGLDK+z8EDsj/zWhrTaH34cKEbrkMKfV5YWqGBvAYA3tlzZbs2R+qYrbQJA==
+  dependencies:
+    "@jridgewell/trace-mapping" "^0.3.25"
+    jest-worker "^27.4.5"
+    schema-utils "^4.3.0"
+    terser "^5.31.1"
+
 terser@^5.10.0, terser@^5.26.0:
   version "5.36.0"
   resolved "https://registry.yarnpkg.com/terser/-/terser-5.36.0.tgz#8b0dbed459ac40ff7b4c9fd5a3a2029de105180e"
@@ -10099,6 +10125,16 @@ terser@^5.10.0, terser@^5.26.0:
   dependencies:
     "@jridgewell/source-map" "^0.3.3"
     acorn "^8.8.2"
+    commander "^2.20.0"
+    source-map-support "~0.5.20"
+
+terser@^5.31.1:
+  version "5.46.2"
+  resolved "https://registry.yarnpkg.com/terser/-/terser-5.46.2.tgz#b9529672d5b0024c7959571c83b82f65077b2a4f"
+  integrity sha512-uxfo9fPcSgLDYob/w1FuL0c99MWiJDnv+5qXSQc5+Ki5NjVNsYi66INnMFBjf6uFz6OnX12piJQPF4IpjJTNTw==
+  dependencies:
+    "@jridgewell/source-map" "^0.3.3"
+    acorn "^8.15.0"
     commander "^2.20.0"
     source-map-support "~0.5.20"
 
