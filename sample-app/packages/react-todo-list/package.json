@@ -26,8 +26,8 @@
   "devDependencies": {
     "@babel/core": "^7.2.0",
     "@splunk/babel-preset": "^4.0.0",
-    "@splunk/eslint-config": "^5.0.0",
-    "@splunk/splunk-utils": "^3.0.1",
+    "@splunk/eslint-config": "^6.0.0",
+    "@splunk/splunk-utils": "^4.0.0",
     "@splunk/stylelint-config": "^5.0.0",
     "@splunk/webpack-configs": "^7.0.2",
     "@testing-library/jest-dom": "^6.0.0",
@@ -58,7 +58,7 @@
   },
   "peerDependencies": {
     "react": "^16.8 || ^19.0.0",
-    "styled-components": "^5.3.10"
+    "styled-components": "^5.3.10 || ^6.0.0"
   },
   "engines": {
     "node": ">=14"
